@@ -23,10 +23,15 @@ BiliBili = [
 # writing with recursion function
 def print_nested_list(somelist):  # 参数不能使用list，因为list是Python的保留字
     for each_item in somelist:
-        if isinstance(each_item, list):
+        if isinstance(each_item, list):  # list是类型
             print_nested_list(each_item)  # Recursive call
         else:
             print(each_item)
 
+
+# print_nested_list(BiliBili)
+
+
+# as a function
 
 print_nested_list(BiliBili)
