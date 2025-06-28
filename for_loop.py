@@ -21,6 +21,24 @@ BiliBili = [
 
 
 # writing with recursion function (generalized for nested lists)
+for each_thing in outside_list:  # in this case, BiliBili as outside_list
+    # check if each_thing is a list
+    if isinstance(each_thing, list):
+        for nested_thing in each_thing:
+            if isinstance(nested_thing, list):
+                for inner_thing in nested_thing:
+                    if isinstance(inner_thing, list):
+                        for deepest_thing in inner_thing:
+                            print(deepest_thing)
+                    else:
+                        print(inner_thing)
+            else:
+                print(nested_thing)
+    else:
+        print(each_thing)
+
+
+# as a function
 def print_nested_list(somelist):  # 參數不能使用list，因為list是Python的保留字
     for each_item in somelist:
         if isinstance(each_item, list):  # list是類型(型別)，isinstance第二個參數放的是類型(型別)
@@ -28,10 +46,5 @@ def print_nested_list(somelist):  # 參數不能使用list，因為list是Python
         else:
             print(each_item)
 
-
-# print_nested_list(BiliBili)
-
-
-# as a function
 
 print_nested_list(somelist)
