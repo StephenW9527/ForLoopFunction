@@ -20,7 +20,7 @@ BiliBili = [
             print("roles:", characters)   """    # 三个双引号 可以注释多行代码
 
 
-# writing with recursion function (generalized for nested lists)
+# writing in a specific case
 for each_thing in outside_list:  # in this case, BiliBili as outside_list
     # check if each_thing is a list
     if isinstance(each_thing, list):
@@ -38,7 +38,7 @@ for each_thing in outside_list:  # in this case, BiliBili as outside_list
         print(each_thing)
 
 
-# as a function
+# as a recursion function (general case form)
 def print_nested_list(somelist):  # 參數不能使用list，因為list是Python的保留字
     for each_item in somelist:
         if isinstance(each_item, list):  # list是類型(型別)，isinstance第二個參數放的是類型(型別)
@@ -47,4 +47,4 @@ def print_nested_list(somelist):  # 參數不能使用list，因為list是Python
             print(each_item)
 
 
-print_nested_list(somelist)
+print_nested_list(somelist)  # Call the function with somelist
