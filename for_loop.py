@@ -47,4 +47,5 @@ def print_nested_list(somelist):  # 參數不能使用list，因為list是Python
             print(each_item)
 
 
-print_nested_list(somelist)  # Call the function with somelist
+print_nested_list(somelist)
+# Call the function with somelist
